@@ -1,3 +1,5 @@
+x |> f = f x
+
 ----------------------
 -- simple functions --
 ----------------------
@@ -13,6 +15,8 @@ doubleSmallNumber x = if x > 100
 -------------------------
 
 boomBangs xs = [ if x < 10 then "boom" else "bang" | x <- xs, odd x ]
+
+boomBangs' xs = filter odd xs |> map (\x -> if x < 10 then "boom" else "bang")
 
 length' xs = sum [ 1 | _ <- xs ]
 

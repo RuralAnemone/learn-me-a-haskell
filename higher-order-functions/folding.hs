@@ -1,0 +1,1 @@
+elem' y = foldl (\acc x -> (x == y) || acc) False
